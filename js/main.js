@@ -1,6 +1,6 @@
 $(function(){
 getUserIP(function(ip){
-    var domain = "http://"+ip+"/Podcast"
+    var domain = "http://"+ip+"/" + location.href.match(/[^\/]+\/[^\/]*$/)[0].match(/[^\/]+/)[0];
 
     var Chrome = VueColor.Chrome;
     Vue.component('colorpicker', {
